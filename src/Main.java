@@ -1,6 +1,41 @@
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
+       //Задача 1
+        System.out.println("Задача 1");
+        int [] salary1 = { 12_500,6_200 ,7_400,8_600,9_300};
+        int sum = 0;
+        for (int i = 0; i < salary1.length; i++) {
+            sum += salary1[i];
+        }
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
-        System.out.println("!");
+        // Задача 2
+        System.out.println("Задача 2");
+        int [] wastes = { 12_500,6_200 ,7_400,8_600,9_300};
+        int maxWaste = wastes[0];
+        int minWaste = wastes[0];
+        for (int i = 0; i < wastes.length; i++) {
+            if (wastes[i] > maxWaste) {
+                maxWaste = wastes[i];
+            }
+            if (minWaste > wastes[i]){
+                minWaste = wastes[i];
+            }
+        }
+        System.out.println("Максимальная сумма трат за неделю составила " + maxWaste + " рублей».");
+        System.out.println("Минимальная сумма трат за неделю составила " + minWaste + " рублей».");
+
+        //Задача 3
+        System.out.println("Задача 3");
+        double [] wastes2 = { 12523,6200.22,7400.33,8600,9311};
+        int sum1 = 0;
+        double wastesPerMonth = 0;
+        for (int y = 0; y < wastes2.length; y++) {
+            sum1 += wastes2[y];
+        }
+        wastesPerMonth = sum1 /4;//делим на 4 недели в месяце.
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей%n " ,wastesPerMonth);
     }
 }
