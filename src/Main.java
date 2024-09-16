@@ -31,27 +31,21 @@ public class Main {
         //Задача 3
         System.out.println("Задача 3");
         double [] wastes2 = { 12523,6200.22,7400.33,8600,9311};
-        int sum1 = 0;
+        double sum1 = 0;
         double wastesPerMonth = 0;
         for (int y = 0; y < wastes2.length; y++) {
             sum1 += wastes2[y];
         }
-        wastesPerMonth = sum1 /4;//делим на 4 недели в месяце.
+        wastesPerMonth = sum1 / wastes2.length;//делим на на длину массива, а не на фиксированное число.
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей%n " ,wastesPerMonth);
 
         //Задача 4
         System.out.println("Задача 4");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length-1; i>=0; i--) {
-            System.out.println(reverseFullName[i]);
+            System.out.print(reverseFullName[i]);
         }
         System.out.println();
 
-        for (int i=0; i<reverseFullName.length/2; i++){
-            char temp = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length-i-1];
-            reverseFullName[reverseFullName.length-i-1]=temp;
-        }
-        System.out.print(Arrays.toString(reverseFullName));
     }
 }
